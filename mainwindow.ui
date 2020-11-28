@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>706</width>
+    <height>327</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>711</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:lightblue;
+border: 1px solid gray;
+</string>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Ajouter une fiche</string>
+     </attribute>
+     <widget class="QLabel" name="labelPatName">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>50</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nom du patient :</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditPatName">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>50</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background: white;
+}
+
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelillness">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>90</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Maladie :</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditIllness">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>90</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background: white;
+}
+
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelTreatment">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>130</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Traitement :</string>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="plainTextEditTreatment">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>130</y>
+        <width>171</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background: white;
+
+
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>200</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: lightgreen;
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Afficher la liste des fiches</string>
+     </attribute>
+     <widget class="QLabel" name="labelID">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>N° Fiche</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditID">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>30</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background: white;
+}
+
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelPatName_2">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>30</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Patient's Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditPatName_2">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>30</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background: white;
+}
+
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonArchive">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>30</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: rgb(255, 170, 0);
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Archiver</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonAfficher">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>30</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: lightgreen;
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Afficher</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonModifier">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>30</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: rgb(85, 255, 255);
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Modifer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonDelete">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>30</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: rgb(255, 0, 0);
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditID_2">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>60</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background: white;
+}
+
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonModifier_2">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>60</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: rgb(85, 255, 255);
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Modifer</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelID_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>N° Fiche</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonDelete_2">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>60</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: rgb(255, 0, 0);
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonArchive_2">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>60</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: rgb(255, 170, 0);
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Archiver</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonAfficher_2">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>60</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: lightgreen;
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Afficher</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelPatName_3">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>60</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Patient's Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditPatName_3">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>60</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background: white;
+}
+
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditID_3">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>90</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background: white;
+}
+
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonModifier_3">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>90</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: rgb(85, 255, 255);
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Modifer</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelID_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>N° Fiche</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonDelete_3">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>90</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: rgb(255, 0, 0);
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonArchive_3">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>90</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: rgb(255, 170, 0);
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Archiver</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonAfficher_3">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>90</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: lightgreen;
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Afficher</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelPatName_4">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>90</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Patient's Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditPatName_4">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>90</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background: white;
+}
+
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditID_4">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>120</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background: white;
+}
+
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonModifier_4">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>120</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: rgb(85, 255, 255);
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Modifer</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelID_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>120</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>N° Fiche</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonDelete_4">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>120</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: rgb(255, 0, 0);
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonArchive_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>120</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: rgb(255, 170, 0);
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Archiver</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonAfficher_4">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>120</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: lightgreen;
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Afficher</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelPatName_5">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>120</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Patient's Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditPatName_5">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>120</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background: white;
+}
+
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditID_5">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>150</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background: white;
+}
+
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonModifier_5">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>150</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: rgb(85, 255, 255);
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Modifer</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelID_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>N° Fiche</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonDelete_5">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>150</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: rgb(255, 0, 0);
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonArchive_5">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>150</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: rgb(255, 170, 0);
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Archiver</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonAfficher_5">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>150</y>
+        <width>66</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: black;
+background-color: lightgreen;
+border-width: 3px;
+border-color: gray;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 11px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Afficher</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelPatName_6">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>150</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Patient's Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditPatName_6">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>150</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background: white;
+}
+
+</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>706</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
