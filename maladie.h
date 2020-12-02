@@ -3,7 +3,7 @@
 #include<QString>
 #include<QSqlQueryModel>
 
-
+//test git
 class Maladie
 {
 public:
