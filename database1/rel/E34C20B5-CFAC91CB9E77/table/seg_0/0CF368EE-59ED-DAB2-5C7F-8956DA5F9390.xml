@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0CF368EE-59ED-DAB2-5C7F-8956DA5F9390" schemaObject="B2DC5E16-D312-F341-674E-1789D3E58D22" name="MALADIE">
+<sourceConnName>Source_Projet2A</sourceConnName>
+<sourceObjSchema>AZIZ1</sourceObjSchema>
+<sourceObjName>MALADIE</sourceObjName>
+<createdBy>dell</createdBy>
+<createdTime>2021-01-06 12:24:51 UTC</createdTime>
+<ownerDesignName>database1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NOM" id="B930CEF9-553F-5B54-829C-81E1D1731EA8">
+<sourceConnName>Source_Projet2A</sourceConnName>
+<sourceObjSchema>MALADIE</sourceObjSchema>
+<sourceObjName>NOM</sourceObjName>
+<createdBy>dell</createdBy>
+<createdTime>2021-01-06 12:24:52 UTC</createdTime>
+<ownerDesignName>database1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CAUSE" id="6AF5B158-3B12-A805-C372-0AFFBAEACF11">
+<sourceConnName>Source_Projet2A</sourceConnName>
+<sourceObjSchema>MALADIE</sourceObjSchema>
+<sourceObjName>CAUSE</sourceObjName>
+<createdBy>dell</createdBy>
+<createdTime>2021-01-06 12:24:52 UTC</createdTime>
+<ownerDesignName>database1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SYMPTOME" id="5B43FDE4-50A3-4B97-5D78-F4D13F825F39">
+<sourceConnName>Source_Projet2A</sourceConnName>
+<sourceObjSchema>MALADIE</sourceObjSchema>
+<sourceObjName>SYMPTOME</sourceObjName>
+<createdBy>dell</createdBy>
+<createdTime>2021-01-06 12:24:52 UTC</createdTime>
+<ownerDesignName>database1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="75961D34-6F2F-C9BE-8AFD-70D04A8F8192" name="MALADIE_PK">
+<sourceConnName>Source_Projet2A</sourceConnName>
+<sourceObjSchema>AZIZ1</sourceObjSchema>
+<sourceObjName>MALADIE_PK</sourceObjName>
+<createdBy>dell</createdBy>
+<createdTime>2021-01-06 12:24:53 UTC</createdTime>
+<ownerDesignName>database1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B930CEF9-553F-5B54-829C-81E1D1731EA8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2206107C-43A1-C88C-8136-2068D0F86F30" schemaObject="B2DC5E16-D312-F341-674E-1789D3E58D22" name="MALADIE_PK">
+<sourceConnName>Source_Projet2A</sourceConnName>
+<sourceObjSchema>AZIZ1</sourceObjSchema>
+<sourceObjName>MALADIE_PK</sourceObjName>
+<createdBy>dell</createdBy>
+<createdTime>2021-01-06 12:24:53 UTC</createdTime>
+<ownerDesignName>database1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B930CEF9-553F-5B54-829C-81E1D1731EA8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
