@@ -25,11 +25,42 @@ color:darkblue;
       <x>10</x>
       <y>10</y>
       <width>941</width>
-      <height>521</height>
+      <height>531</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">
+/* Style the tab using the tab sub-control. Note that it reads QTabBar not QTabWidget */
+QTabBar::tab {
+background: :rgb(215, 255, 255);
+border: 1px solid darkblue;
+border-bottom-color: darkblue; /* same as the pane color */
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+min-width: 120px;
+padding: 2px;
+color: darkyellow;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+}
+QTabBar::tab:selected, QTabBar::tab:hover {
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #DCDCDC, stop: 0.4 #C0C0C0, stop: 0.5 #A9A9A9, stop: 1.0 #A9A9A9);
+}
+QTabBar::tab:selected {
+border-color: darkblue;
+border-bottom-color: yellow; 
+color: yellow;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+}
+QTabBar::tab:!selected {
+margin-top: 4px; /* make non-selected tabs look smaller */
+}
+
+</string>
+    </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -45,10 +76,11 @@ color:darkblue;
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color:rgb(164, 255, 252)</string>
+       <string notr="true">background-color:rgb(164, 255, 252);
+</string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
@@ -64,8 +96,10 @@ color:darkblue;
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">color : rgb(0, 0, 127);
-background-color:none</string>
+         <string notr="true">border-color : rgb(0, 0, 127);
+border-style : solid;
+border-width : 2px;
+background-color:rgb(236, 236, 236)</string>
         </property>
         <property name="text">
          <string>Ajouter</string>
@@ -250,8 +284,10 @@ background-color:none</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">color : rgb(0, 0, 127);
-background-color:none</string>
+         <string notr="true">border-color : rgb(0, 0, 127);
+border-style : solid;
+border-width : 2px;
+background-color:rgb(236, 236, 236)</string>
         </property>
         <property name="text">
          <string>Modifier</string>
@@ -283,8 +319,11 @@ background-color:none</string>
            <height>401</height>
           </rect>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:rgb(164, 255, 252)</string>
+         </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="tab_9">
           <attribute name="title">
@@ -316,8 +355,10 @@ background-color:none</string>
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">color : rgb(0, 0, 127);
-background-color:none</string>
+            <string notr="true">border-color : rgb(0, 0, 127);
+border-style : solid;
+border-width : 2px;
+background-color:rgb(236, 236, 236)</string>
            </property>
            <property name="text">
             <string>Afficher</string>
@@ -347,18 +388,103 @@ background-color:none</string>
           <widget class="QPushButton" name="Trier_medic">
            <property name="geometry">
             <rect>
-             <x>612</x>
-             <y>120</y>
+             <x>610</x>
+             <y>170</y>
              <width>211</width>
              <height>28</height>
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">color : rgb(0, 0, 127);
-background-color:none</string>
+            <string notr="true">border-color : rgb(0, 0, 127);
+border-style : solid;
+border-width : 2px;
+background-color:rgb(236, 236, 236)</string>
            </property>
            <property name="text">
-            <string>Trier</string>
+            <string>Nom</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_11">
+           <property name="geometry">
+            <rect>
+             <x>530</x>
+             <y>140</y>
+             <width>71</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+             <underline>true</underline>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:none
+</string>
+           </property>
+           <property name="text">
+            <string>Trier par:</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="geometry">
+            <rect>
+             <x>610</x>
+             <y>210</y>
+             <width>211</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color : rgb(0, 0, 127);
+border-style : solid;
+border-width : 2px;
+background-color:rgb(236, 236, 236)</string>
+           </property>
+           <property name="text">
+            <string>Prix</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_3">
+           <property name="geometry">
+            <rect>
+             <x>610</x>
+             <y>250</y>
+             <width>211</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color : rgb(0, 0, 127);
+border-style : solid;
+border-width : 2px;
+background-color:rgb(236, 236, 236)</string>
+           </property>
+           <property name="text">
+            <string>Cas d'utilisation</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Printer">
+           <property name="geometry">
+            <rect>
+             <x>440</x>
+             <y>310</y>
+             <width>51</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-image: url(:/printer/Printer.png);
+border-color : rgb(0, 0, 127);
+border-style : solid;
+border-width : 2px;
+background-color:rgb(236, 236, 236)</string>
+           </property>
+           <property name="text">
+            <string/>
            </property>
           </widget>
          </widget>
@@ -399,8 +525,10 @@ background-color:none</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">color : rgb(0, 0, 127);
-background-color:none</string>
+            <string notr="true">border-color : rgb(0, 0, 127);
+border-style : solid;
+border-width : 2px;
+background-color:rgb(236, 236, 236)</string>
            </property>
            <property name="text">
             <string>Rechercher</string>
@@ -512,8 +640,10 @@ background-color:none</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">color : rgb(0, 0, 127);
-background-color:none</string>
+         <string notr="true">border-color : rgb(0, 0, 127);
+border-style : solid;
+border-width : 2px;
+background-color:rgb(236, 236, 236)</string>
         </property>
         <property name="text">
          <string>Supprimer</string>
@@ -540,7 +670,7 @@ background-color:none</string>
 </string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_6">
        <attribute name="title">
@@ -556,8 +686,10 @@ background-color:none</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">color : rgb(0, 0, 127);
-background-color:none</string>
+         <string notr="true">border-color : rgb(0, 0, 127);
+border-style : solid;
+border-width : 2px;
+background-color:rgb(236, 236, 236)</string>
         </property>
         <property name="text">
          <string>Modifier</string>
@@ -573,8 +705,10 @@ background-color:none</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">color : rgb(0, 0, 127);
-background-color:none</string>
+         <string notr="true">border-color : rgb(0, 0, 127);
+border-style : solid;
+border-width : 2px;
+background-color:rgb(236, 236, 236)</string>
         </property>
         <property name="text">
          <string>Ajouter</string>
@@ -819,7 +953,7 @@ background-image:none</string>
           <string notr="true">background-color:rgb(164, 255, 252)</string>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="tab_11">
           <attribute name="title">
@@ -875,11 +1009,33 @@ background-color:none</string>
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">color : rgb(0, 0, 127);
-background-color:none</string>
+            <string notr="true">border-color : rgb(0, 0, 127);
+border-style : solid;
+border-width : 2px;
+background-color:rgb(236, 236, 236)</string>
            </property>
            <property name="text">
             <string>Afficher</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Print_malad">
+           <property name="geometry">
+            <rect>
+             <x>440</x>
+             <y>307</y>
+             <width>51</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-image: url(:/printer/Printer.png);
+border-color : rgb(0, 0, 127);
+border-style : solid;
+border-width : 2px;
+background-color:rgb(236, 236, 236)</string>
+           </property>
+           <property name="text">
+            <string/>
            </property>
           </widget>
          </widget>
@@ -958,8 +1114,10 @@ background-color:none</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">color : rgb(0, 0, 127);
-background-color:none</string>
+            <string notr="true">border-color : rgb(0, 0, 127);
+border-style : solid;
+border-width : 2px;
+background-color:rgb(236, 236, 236)</string>
            </property>
            <property name="text">
             <string>Rechercher</string>
@@ -1041,8 +1199,10 @@ background-color:none</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">color : rgb(0, 0, 127);
-background-color:none</string>
+         <string notr="true">border-color : rgb(0, 0, 127);
+border-style : solid;
+border-width : 2px;
+background-color:rgb(236, 236, 236)</string>
         </property>
         <property name="text">
          <string>Supprimer</string>
@@ -1063,11 +1223,13 @@ background-color:none</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-image: url(:/image/244.png);
-border-color : rgb(0, 0, 255);
+border-color :yellow;
 border-style : solid;
 border-width : 2px;
 background-color:none;
 border-radius: 20px;
+background-color:rgb(215, 255, 255);
+
 </string>
     </property>
    </widget>

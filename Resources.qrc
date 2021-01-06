@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>244.png</file>
+    </qresource>
+    <qresource prefix="/son">
+        <file>play.png</file>
+        <file>Sound.wav</file>
+    </qresource>
+    <qresource prefix="/printer">
+        <file>Printer.png</file>
+    </qresource>
+</RCC>

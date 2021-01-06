@@ -1,11 +1,5 @@
 <RCC>
-    <qresource prefix="/image">
-        <file>244.png</file>
-    </qresource>
-    <qresource prefix="/son">
-        <file>pause.png</file>
-        <file>play.png</file>
-        <file>stop.png</file>
-        <file>fancy-hotel-lobby-musicpiano.mp3</file>
+    <qresource prefix="/Printer">
+        <file>Printer.png</file>
     </qresource>
 </RCC>

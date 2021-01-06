@@ -14,6 +14,8 @@ public:
     bool ajouter();
     QSqlQueryModel * afficher();
     QSqlQueryModel * afficher_medicament_trier();
+    QSqlQueryModel * medicament_trier_prix();
+    QSqlQueryModel * medicament_trier_cas();
     QSqlQueryModel * rechercher_medicament(const QString &nom);
     bool supprimer(QString);
     bool modifier();

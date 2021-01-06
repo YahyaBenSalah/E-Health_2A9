@@ -2,6 +2,9 @@
 #include "ui_mainwindow.h"
 #include "medicament.h"
 #include<QMessageBox>
+#include<QPrinter>
+#include <QPrintDialog>
+#include<QPainter>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -10,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->table_maladie->setModel(tmpmld.afficher());
     ui->table_medic->setModel(tmpmedic.afficher());
-    son=new QSound(":/fancy-hotel-lobby-musicpiano.mp3");
+    son=new QSound(":/Sound/Sound.wav");
 }
 
 MainWindow::~MainWindow()
@@ -94,13 +97,24 @@ void MainWindow::on_Afficher_medic_clicked()
 
 void MainWindow::on_Trier_medic_clicked()
 {
-    ui->table_medic->setModel(tmpmedic.afficher_medicament_trier());
+         ui->table_medic->setModel(tmpmedic.afficher_medicament_trier());
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+         ui->table_medic->setModel(tmpmedic.medicament_trier_prix());
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+        ui->table_medic->setModel(tmpmedic.medicament_trier_cas());
 }
 
 void MainWindow::on_pb_recherche_clicked()
 {
     QString nom = ui->le_nom_rech->text();
     ui->table_rech_mdc->setModel(tmpmedic.rechercher_medicament(nom));
+    ui->table_medic->setModel(tmpmedic.afficher());
 }
 
 
@@ -180,7 +194,68 @@ void MainWindow::on_rechercher_maladie_clicked()
     ui->table_maladie->setModel(tmpmld.afficher());
 }
 
+//son
 void MainWindow::on_pushButton_clicked()
 {
     son->play();
+}
+
+void MainWindow::on_Printer_clicked()
+{
+    QPrinter *printer = new QPrinter(QPrinter::HighResolution);
+              printer->setOutputFormat(QPrinter::NativeFormat);
+              printer->setPageSize(QPrinter::A4);
+              printer->setOrientation(QPrinter::Portrait);
+              printer->setFullPage(true);
+
+
+          QPrintDialog *printDialog = new QPrintDialog(printer,this);
+          printDialog->setWindowTitle("Impression PDF");
+          if(printDialog->exec())
+          {
+             QPainter painter;
+             if(painter.begin(printer))
+             {
+                 double xscale = double(ui->table_medic->width() / 65);
+                 double yscale = double(ui->table_medic->height() / 65);
+                 painter.scale(xscale, yscale);
+                 ui->table_medic->render(&painter);
+                 painter.end();
+             }
+             else
+             {
+                 qWarning("failed to open file");
+                QMessageBox::warning(nullptr,QObject::tr("PDF echoue"),QObject::tr("click cancel to exit!"),QMessageBox::Cancel);
+             }
+          }
+}
+
+void MainWindow::on_Print_malad_clicked()
+{
+    QPrinter *printer = new QPrinter(QPrinter::HighResolution);
+              printer->setOutputFormat(QPrinter::NativeFormat);
+              printer->setPageSize(QPrinter::A4);
+              printer->setOrientation(QPrinter::Portrait);
+              printer->setFullPage(true);
+
+
+          QPrintDialog *printDialog = new QPrintDialog(printer,this);
+          printDialog->setWindowTitle("Impression PDF");
+          if(printDialog->exec())
+          {
+             QPainter painter;
+             if(painter.begin(printer))
+             {
+                 double xscale = double(ui->table_medic->width() / 65);
+                 double yscale = double(ui->table_medic->height() / 65);
+                 painter.scale(xscale, yscale);
+                 ui->table_maladie->render(&painter);
+                 painter.end();
+             }
+             else
+             {
+                 qWarning("failed to open file");
+                QMessageBox::warning(nullptr,QObject::tr("PDF echoue"),QObject::tr("click cancel to exit!"),QMessageBox::Cancel);
+             }
+          }
 }

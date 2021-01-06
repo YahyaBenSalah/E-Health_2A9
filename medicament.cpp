@@ -2,6 +2,9 @@
 #include <QSqlQuery>
 #include <QDebug>
 #include <QSqlQueryModel>
+#include <QMediaPlayer>
+
+
 
 medicament::medicament()
 {
@@ -49,6 +52,9 @@ bool medicament::ajouter()
 QSqlQueryModel * medicament::afficher()
 {
     QSqlQueryModel * model = new QSqlQueryModel();
+    QMediaPlayer * music =new QMediaPlayer;
+        music->setMedia(QUrl("qrc:/son/Sound.wav"));
+        music->play();
 
     model->setQuery("select * from medicament");
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("nom"));
@@ -82,24 +88,48 @@ bool medicament::modifier()
 
 QSqlQueryModel *medicament::afficher_medicament_trier()
 {
-    QSqlQueryModel *model=new QSqlQueryModel();
+        QSqlQueryModel * model=new QSqlQueryModel();
 
-    model->setQuery("select *from employee ORDER BY nom");
-    model->setHeaderData(0,Qt::Horizontal,QObject::tr("nom"));
-    model->setHeaderData(0,Qt::Horizontal,QObject::tr("prix"));
-    model->setHeaderData(0,Qt::Horizontal,QObject::tr("casutilisation"));
+        model->setQuery("select * from medicament order by nom desc ");
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("nom"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("prix"));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("cas"));
 
-    return model;
+        return model;
+}
+
+QSqlQueryModel *medicament::medicament_trier_prix()
+{
+        QSqlQueryModel * model=new QSqlQueryModel();
+
+        model->setQuery("select * from medicament order by prix asc ");
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("nom"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("prix"));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("cas"));
+
+        return model;
+}
+
+QSqlQueryModel *medicament::medicament_trier_cas()
+{
+        QSqlQueryModel * model=new QSqlQueryModel();
+
+        model->setQuery("select * from medicament order by CASUTILISATION desc ");
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("nom"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("prix"));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("CASUTILISATION"));
+
+        return model;
 }
 
 QSqlQueryModel *medicament::rechercher_medicament(const QString &nom)
 {
     QSqlQueryModel *model=new QSqlQueryModel();
 
-    model->setQuery("select * from employee where(nom LIKE '"+nom+"%')");
-    model->setHeaderData(0,Qt::Horizontal,QObject::tr("nom"));
-    model->setHeaderData(0,Qt::Horizontal,QObject::tr("prix"));
-    model->setHeaderData(0,Qt::Horizontal,QObject::tr("casutilisation"));
+    model->setQuery("select * from medicament where(nom LIKE '"+nom+"')");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("nom"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("prix"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("casutilisation"));
 
     return model;
 }
