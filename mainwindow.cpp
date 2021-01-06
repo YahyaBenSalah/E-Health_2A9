@@ -5,6 +5,8 @@
 #include<QPrinter>
 #include <QPrintDialog>
 #include<QPainter>
+#include<QtDebug>
+#include"Arduino.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -14,13 +16,23 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->table_maladie->setModel(tmpmld.afficher());
     ui->table_medic->setModel(tmpmedic.afficher());
     son=new QSound(":/Sound/Sound.wav");
+    int ret=A.connect_arduino();
+       switch (ret)
+       {
+        case(0):qDebug()<<"arduino is available and connected to :"<<A.getarduino_port_name();
+           break;
+       case(1):qDebug()<<"arduino is available but not connected to :"<<A.getarduino_port_name();
+          break;
+       case(-1):qDebug()<<"arduino is not available and connected to :"<<A.getarduino_port_name();
+          break;
+       }
+       QObject::connect(A.getserial(), SIGNAL(readyRead()), this, SLOT(update_label()));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-
 
 void MainWindow::on_Ajout_medic_clicked()
 {
@@ -258,4 +270,15 @@ void MainWindow::on_Print_malad_clicked()
                 QMessageBox::warning(nullptr,QObject::tr("PDF echoue"),QObject::tr("click cancel to exit!"),QMessageBox::Cancel);
              }
           }
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    data = A.read_from_arduino();
+
+    if (data == "1")
+        ui->lineEdit_2->setText("ON");
+
+    else if (data =="0")
+        ui->lineEdit_2->setText("OFF");
 }

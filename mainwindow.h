@@ -4,6 +4,7 @@
 #include"maladie.h"
 #include <QMainWindow>
 #include <QSound>
+#include"Arduino.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -21,6 +22,7 @@ public:
     ~MainWindow();
 
 private slots:
+
     void on_Ajout_medic_clicked();
 
     void on_Supprimer_medic_clicked();
@@ -53,11 +55,15 @@ private slots:
 
     void on_Print_malad_clicked();
 
+    void on_pushButton_4_clicked();
+
 private:
     Ui::MainWindow *ui;
     medicament tmpmedic;
     Maladie tmpmld;
     QSound *son;
+    Arduino A;
+    QByteArray data;
 
 
 };
